@@ -1,5 +1,5 @@
-![Screenshot (58)](https://github.com/sagorrrr11/single_screen_app_with_flutter/assets/130689825/87b0a755-2a6f-4203-9bda-03840e73c97c)
-![Screenshot (57)](https://github.com/sagorrrr11/single_screen_app_with_flutter/assets/130689825/38f7d172-abbc-4caa-9c19-ff8b9875ef44)
+![Screenshot (57)](https://github.com/sagorrrr11/single_screen_app_with_flutter/assets/130689825/5673a38c-6c17-43e3-9a00-d238f89395af)
+![Screenshot (58)](https://github.com/sagorrrr11/single_screen_app_with_flutter/assets/130689825/bf2909e0-bc03-43fa-aacd-307aaeec4618)
 
 # classico
 
