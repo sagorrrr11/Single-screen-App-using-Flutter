@@ -1,5 +1,6 @@
-![Screenshot (58)](https://github.com/sagorrrr11/single_screen_app_with_flutter/assets/130689825/08512cb8-507f-4bfc-825d-c75d49119f2b)
-![Screenshot (57)](https://github.com/sagorrrr11/single_screen_app_with_flutter/assets/130689825/0acf9283-c012-4d3f-82f9-192cc793edee)
+![Screenshot (58)](https://github.com/sagorrrr11/single_screen_app_with_flutter/assets/130689825/87b0a755-2a6f-4203-9bda-03840e73c97c)
+![Screenshot (57)](https://github.com/sagorrrr11/single_screen_app_with_flutter/assets/130689825/38f7d172-abbc-4caa-9c19-ff8b9875ef44)
+
 # classico
 
 A new Flutter project.
