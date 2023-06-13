@@ -1,121 +1,104 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(TabbedApp());
+  runApp(const MyApp());
 }
 
-class TabbedApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Tabbed App',
+      title: 'Single Screen App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: TabbedHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
 
-class TabbedHomePage extends StatefulWidget {
-  @override
-  _TabbedHomePageState createState() => _TabbedHomePageState();
-}
-
-class _TabbedHomePageState extends State<TabbedHomePage> {
-  int _currentIndex = 0;
-
-  List<Widget> _pages = [
-    TabbedPage(number: 1, color: Colors.red),
-    TabbedPage(number: 2, color: Colors.green),
-    TabbedPage(number: 3, color: Colors.blue),
-  ];
-
-  void _onTabChanged(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tabbed App'),
+        backgroundColor: Colors.blue, // Customize the AppBar's background color
+        elevation: 2.0, // Customize the AppBar's elevation
+        centerTitle: true, // Center-align the title
+        title: const Text('My App'), // Set the title
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {
+              // Add action for the search icon
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: () {
+              // Add action for the settings icon
+            },
+          ),
+        ],
       ),
       drawer: Drawer(
         child: ListView(
-          children: [
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text(
+                'Custom Banner',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
             ListTile(
-              title: Text('Page 1'),
+              title: const Text('Menu Item 1'),
               onTap: () {
-                _onTabChanged(0);
-                Navigator.pop(context);
+                // Add action for Menu Item 1
               },
             ),
             ListTile(
-              title: Text('Page 2'),
+              title: const Text('Menu Item 2'),
               onTap: () {
-                _onTabChanged(1);
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Page 3'),
-              onTap: () {
-                _onTabChanged(2);
-                Navigator.pop(context);
+                // Add action for Menu Item 2
               },
             ),
           ],
         ),
       ),
-      body: _pages[_currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: _onTabChanged,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Page 1',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Page 2',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'Page 3',
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class TabbedPage extends StatelessWidget {
-  final int number;
-  final Color color;
-
-  const TabbedPage({Key? key, required this.number, required this.color})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: color,
-        onPressed: () {},
-        child: Icon(Icons.add),
-      ),
-      body: Center(
+      body: const Center(
         child: Text(
-          'Page $number',
-          style: TextStyle(fontSize: 24),
+          'Welcome to my app!',
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add action for the FAB
+        },
+        backgroundColor: Colors.red, // Customize the FAB's color
+        child: const Icon(
+          Icons.add,
+          size: 36,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation
+          .startFloat, // Position the FAB in the bottom left corner
     );
   }
 }
+
